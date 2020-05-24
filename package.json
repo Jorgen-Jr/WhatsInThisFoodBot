@@ -1,5 +1,5 @@
 {
-  "name": "ntalesbot",
+  "name": "whatsinthisfoodbot",
   "version": "1.0.0",
   "description": "Bot for telegram.",
   "main": "server.js",

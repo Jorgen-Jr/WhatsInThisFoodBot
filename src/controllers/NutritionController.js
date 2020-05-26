@@ -1,13 +1,16 @@
 const nutritionapi = require('../services/nutritionapi');
 
 module.exports = {
-    async sampleRequest(req) {
-        const response = await nutritionapi.get(req + '?notfound=floor')
+    async getRecipeDetails(req) {
+        const { ingr, title, yield } = req;
+        const response = await nutritionapi.post('' ,{
+            ingr, title, yield,
+        })
         .then(res => {
             return res.data;
         })
         .catch(err => {
-            return false;
+            return err;
         });
         
         return response;

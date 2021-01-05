@@ -26,6 +26,8 @@ exports.handler = async event => {
     const food = inline_query.query;
 
     if (food) {
+        let results = [];
+
         console.log("Fetching foog: " + food);
         if (inline_query) {
 

@@ -29,7 +29,7 @@ exports.handler = async event => {
         console.log("Fetching foog: " + food);
         if (inline_query) {
 
-            const response = await FoodController.getFoodItem(queryContent);
+            const response = await FoodController.getFoodItem(food);
 
             response.parsed.map((item) => {
                 const getNutrients = nutrientsMap.filter(nutrient => {
